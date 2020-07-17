@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:padding="25dp"
+  android:background="@drawable/login_bg"
+  tools:context=".ui.activities.LoginActivity">
+
+  <ImageView
+    android:layout_width="300dp"
+    android:layout_height="210dp"
+      android:layout_gravity="center"
+      android:layout_marginRight="35dp"
+      android:layout_marginTop="51dp"
+    android:src="@drawable/uu"
+    android:padding="30dp"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <EditText
+      android:id="@+id/et_reg_id"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/user_id"
+      android:ems="10"
+      android:inputType="text"
+      android:textSize="20sp"
+      />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    app:passwordToggleEnabled="true">
+
+    <EditText
+      android:id="@+id/et_password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="@string/password"
+      android:ems="10"
+      android:inputType="textPassword"
+      android:textSize="20sp"
+      />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/login"
+    android:textSize="22sp"
+    android:background="@drawable/btn_login"
+    android:layout_marginTop="40dp"
+    android:textColor="#ffffff"
+    android:onClick="login"
+    />
+
+  <!--Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/register"
+    android:textSize="22sp"
+    android:background="@drawable/button_rounded"
+    android:layout_marginTop="10dp"
+    android:textColor="#ffffff"
+    android:onClick="btn_register"
+    /-->
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:gravity="center"
+      android:orientation="horizontal">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/kanit_regular"
+        android:text="New User?"
+        android:textSize="14sp"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:fontFamily="@font/kanit_regular"
+        android:text="Register Now"
+        android:onClick="btn_register"
+        android:textColor="#ff7c17"
+        android:textSize="18sp"/>
+  </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

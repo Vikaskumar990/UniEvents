@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="@dimen/nav_header_height"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:background="@drawable/side_nav_bar"
+  android:gravity="bottom"
+  android:orientation="vertical"
+  android:paddingLeft="@dimen/activity_horizontal_margin"
+  android:paddingTop="@dimen/activity_vertical_margin"
+  android:paddingRight="@dimen/activity_horizontal_margin"
+  android:paddingBottom="@dimen/activity_vertical_margin"
+  tools:context=".ui.activities.DashboardActivity">
+
+  <de.hdodenhof.circleimageview.CircleImageView
+    android:id="@+id/imageView"
+    android:layout_width="@dimen/size_70dp"
+    android:layout_height="@dimen/size_70dp"
+    android:contentDescription="@string/nav_header_desc"
+    android:paddingTop="@dimen/nav_header_vertical_spacing"
+    android:src="@drawable/female_user"
+    app:civ_border_width="1dp"
+    app:civ_border_color="@color/colorAccentLight" />
+  <TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+      android:id="@+id/tvStName"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="2"
+      android:paddingTop="@dimen/nav_header_vertical_spacing"
+      android:textColor="@color/primaryTextColor"
+      android:text="@string/nav_header_title" />
+    <LinearLayout
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1"
+      android:gravity="end">
+      <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btEditProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/size_30dp"
+        android:background="@drawable/bg_button_outline"
+        android:text="@string/view_profile"
+        android:textColor="@color/colorAccentLight"
+        android:onClick="editProfile"
+        android:textAllCaps="false"/>
+    </LinearLayout>
+  </TableRow>
+
+  <TextView
+    android:id="@+id/tvStEmail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/primaryTextColor"
+    android:text="@string/nav_header_subtitle" />
+
+</LinearLayout>
